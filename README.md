@@ -1,7 +1,7 @@
 # Medical History Intake Form
 
 This project is a **Medical History Intake Form** built entirely in HTML and with one script in JavaScript.  
-It was created as a personal exercise after learning about HTML forms. 
+It was created as a personal exercise after learning about HTML forms on Freecodecamp.
 
 ## ✨ **About**
 
