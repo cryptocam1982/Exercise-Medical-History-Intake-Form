@@ -4,50 +4,63 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Medical History Intake Form</title>
+        <link href="styles.css" rel="stylesheet" />
     </head>
     <body>
         <h1 style="text-align: center">Medical History Intake Form</h1>
         <h2 style="text-align: center">Collects detailed information from a patient before an appointment</h2>
         <form action="/action_page.php" method="post">
-            <h3>Personal details</h3>
-            <fieldset>
-                <label for="full-name">Full Name</label>
-                <input id="full-name" name="full-name" type="text" placeholder="First and last name" required />
-                <br /><br />
-                <label for="date-of-birth">Date of birth</label>
-                <input id="date-of-birth" name="date-of-birth" type="date" required />
-            </fieldset>
+            <section>
+                <h3>Personal details</h3>
+                <fieldset>
+                    <label for="full-name">Full Name</label>
+                    <input id="full-name" name="full-name" type="text" placeholder="First and last name" required />
+                    <br /><br />
+                    <label for="date-of-birth">Date of birth</label>
+                    <input id="date-of-birth" name="date-of-birth" type="date" required />
+                </fieldset>
+            </section>
             <br />
-            <fieldset>
-                <legend>What's your gender?</legend>
-                <input type="radio" id="male" name="gender" value="male" />
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="female" />
-                <label for="female">Female</label>
-                <input type="radio" id="other" name="gender" value="other" />
-                <label for="other">Other</label>
-            </fieldset>
-            <fieldset>
-                <legend>Contact details</legend>
-                <label for="address">Address</label>
-                <br />
-                <textarea id="address" name="address" rows="4" cols="50" required></textarea>
-                <br /><br />
-                <label for="phone-number">Phone Number</label>
-                <input type="tel" id="phone-number" name="phone-number" required />
-                <br /><br />
-                <label for="email">E-mail address</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="email@company.com"
-                    title="Please enter a valid email address (e.g. email@company.com)"
-                    required />
-            </fieldset>
-            <h3>Medical Information</h3>
-            <fieldset>
-                <legend>Do you have any allergies? (click all that apply)</legend>
+            <section>
+                <fieldset>
+                    <h3 class="gender">What's your gender?</h3>
+                    <input type="radio" id="male" name="gender" value="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" />
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other" />
+                    <label for="other">Other</label>
+                </fieldset>
+            </section>
+            <div class="contact-details">
+                <fieldset>
+                    <h3>Contact details</h3>
+                    <label for="address">Address</label>
+                    <br />
+                    <textarea
+                        id="address"
+                        name="address"
+                        rows="4"
+                        cols="50"
+                        placeholder="street name, house number, zip code and city"
+                        required></textarea>
+                    <br /><br />
+                    <label for="phone-number">Phone Number</label>
+                    <input type="tel" id="phone-number" name="phone-number" required placeholder="phone number" />
+                    <br /><br />
+                    <label for="email">E-mail address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="email@company.com"
+                        title="Please enter a valid email address (e.g. email@company.com)"
+                        required />
+                </fieldset>
+            </div>
+            <section>
+                <h3 class="medical-information">Medical Information</h3>
+                <h4>Do you have any allergies? (click all that apply, except 'none')</h4>
                 <input type="checkbox" id="peanuts" name="allergies[]" value="peanuts" class="allergies" />
                 <label for="peanuts">Peanuts</label>
                 <br />
@@ -59,43 +72,74 @@
                 <br />
                 <input type="checkbox" id="none" name="allergies[]" value="none" />
                 <label for="none">None</label>
-                <br />
-                <p>Current medication</p>
-                <textarea id="medication" name="medication" rows="5" cols="50"></textarea>
-                <p>Medical conditions</p>
-                <label for="diabetes">Diabetes</label>
-                <input type="checkbox" id="diabetes" name="medical-conditions[]" value="diabetes" />
-                <br />
-                <label for="hypertension">Hypertension</label>
-                <input type="checkbox" id="hypertension" name="medical-conditions[]" value="hypertension" />
-                <br />
-                <label for="asthma">Asthma</label>
-                <input id="asthma" type="checkbox" name="medical-conditions[]" value="asthma" />
-                <br /><br />
-                <label for="other-sorts">Other Sorts</label>
-                <textarea id="other-sorts" name="medical-conditions[]" rows="1" cols="65"></textarea>
-            </fieldset>
-            <fieldset>
-                <h3>Other details</h3>
-                <label for="emergency-contact">Emergency contact (required)</label>
-                <input
-                    type="text"
-                    id="emergency-contact"
-                    name="emergency-contact"
-                    minlength="5"
-                    maxlength="130"
-                    required />
-                <br />
-                <label for="emergency-phone">Emergency Contact Phone (required)</label>
-                <input type="tel" id="emergency-phone" name="emergency-phone" required />
-                <label for="preferred-date">Preferred Date</label>
-                <input type="date" id="preferred-date" name="preferred-date" />
-                <br />
-                <label for="signature">Signature</label>
-                <br />
-                <textarea id="signature" name="signature" rows="7" cols="35"></textarea>
-                <input type="submit" value="Submit" />
-            </fieldset>
+                <h3 class="current-medication">Current medication</h3>
+                <textarea
+                    id="medication"
+                    name="medication"
+                    placeholder="all current medication"
+                    rows="11"
+                    cols="57"></textarea>
+                <h3 class="medical-conditions">Medical Conditions</h3>
+                <div class="diseases">
+                    <label for="diabetes">Diabetes</label>
+                    <input type="checkbox" id="diabetes" name="medical-conditions[]" value="diabetes" />
+                </div>
+                <div class="diseases">
+                    <label for="hypertension">Hypertension</label>
+                    <input type="checkbox" id="hypertension" name="medical-conditions[]" value="hypertension" />
+                </div>
+                <div class="diseases">
+                    <label for="asthma">Asthma</label>
+                    <input id="asthma" type="checkbox" name="medical-conditions[]" value="asthma" />
+                </div>
+                <div class="other-conditions">
+                    <label for="other-conditions">Other Medical Conditions</label>
+                    <textarea
+                        id="other-sorts"
+                        name="medical-conditions[]"
+                        rows="5"
+                        placeholder="other medical conditions"
+                        cols="65"></textarea>
+                </div>
+
+                <fieldset>
+                    <h3 class="other-details">Other details</h3>
+                    <div class="other-details">
+                        <label for="emergency-contact">Emergency contact (required)</label>
+                        <input
+                            type="text"
+                            id="emergency-contact"
+                            name="emergency-contact"
+                            minlength="5"
+                            maxlength="156"
+                            placeholder="first and last name"
+                            required />
+                    </div>
+                    <div class="other-details">
+                        <label for="emergency-phone">Emergency Contact Phone (required)</label>
+                        <input
+                            type="tel"
+                            id="emergency-phone"
+                            name="emergency-phone"
+                            placeholder="phone numer"
+                            required />
+                    </div>
+                    <div class="other-details">
+                        <label class="preferred-date" for="preferred-date">Preferred Appointment Date</label>
+                        <input type="date" id="preferred-date" name="preferred-date" />
+                    </div>
+                    <div class="other-details">
+                        <label for="signature">Signature</label>
+                        <textarea
+                            id="signature"
+                            name="signature"
+                            rows="7"
+                            cols="35"
+                            placeholder="digital name"></textarea>
+                        <input type="submit" value="Submit" />
+                    </div>
+                </fieldset>
+            </section>
         </form>
         <script>
             document.getElementById("none").addEventListener("change", function () {
@@ -113,3 +157,4 @@
         </script>
     </body>
 </html>
+
