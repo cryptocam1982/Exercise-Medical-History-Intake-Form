@@ -1,3 +1,54 @@
 .title {
     color: green;
 }
+
+.medical-conditions {
+    font-family: Gill Sans;
+    padding-left: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+    font-size: 26px;
+}
+
+.gender {
+    size: auto;
+    font-size: larger;
+    padding-left: 15px;
+}
+
+.contact-details {
+    background-color: antiquewhite;
+    opacity: 95%;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.current-medication {
+    font-family: Gill Sans;
+    font-size: 26px;
+    padding-left: 50px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: flex;
+}
+
+.other-details {
+    writing-mode: horizontal-tb;
+    display: grid;
+}
+
+.emergency-details {
+    vertical-align: middle;
+}
+
+.diseases {
+    writing-mode: horizontal-tb;
+    display: block;
+}
+
+.other-conditions {
+    display: grid;
+}
+
+
