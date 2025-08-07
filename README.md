@@ -42,7 +42,3 @@ You can change this to your desired endpoint or integrate with a backend for rea
 - Gain experience with client-side form logic (e.g., managing exclusive checkboxes)
 - Understand form field requirements and data grouping
 
-## 📸 **Screenshot**
-
-_Add a screenshot of the form here (optional):_
-
