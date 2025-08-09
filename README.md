@@ -1,6 +1,6 @@
 # Medical History Intake Form
 
-This project is a **Medical History Intake Form** built entirely in HTML and with one script in JavaScript.  
+This project is a **Medical History Intake Form** built with HTML for structure, a small JavaScript snippet for interactivity, and styling defined in the accompanying `styles.css` file. You can replace this stylesheet or integrate frameworks like Bootstrap or Tailwind CSS for a different look.
 It was created as a personal exercise after learning about HTML forms on Freecodecamp.
 
 ## ✨ **About**
@@ -33,7 +33,7 @@ You can change this to your desired endpoint or integrate with a backend for rea
 ## 🛠️ **Customization**
 
 - Add/remove input fields or questions to suit your workflow.
-- Style the form with CSS for a custom appearance.
+- Style the form using the provided `styles.css` or swap in frameworks such as Bootstrap or Tailwind CSS for a custom appearance.
 - Enhance JavaScript for more validation or interactivity.
 
 ## 🎯 **Learning Goals**
